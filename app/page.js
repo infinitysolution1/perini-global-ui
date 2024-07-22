@@ -10,11 +10,14 @@ let title = "EXCLUSIVE HOME";
 export default function Home() {
   const ref = useRef(null);
   return (
-    <main className=" w-screen min-h-screen bg-white">
+    <main className=" w-screen min-h-screen bg-white z-0">
       <div className=" flex flex-col min-h-screen h-screen w-screen relative">
         <div className=" absolute left-0 top-0 w-full h-full z-0">
           <video autoPlay muted loop className=" w-full h-full object-cover">
-            <source src="/bgvideo.mp4" type="video/mp4" />
+            <source
+              src={process.env.NEXT_PUBLIC_API_URL + "/bgvideo.mp4"}
+              type="video/mp4"
+            />
           </video>
         </div>
         <div className=" absolute left-0 top-0 w-full h-full z-10 bg-black/20"></div>
