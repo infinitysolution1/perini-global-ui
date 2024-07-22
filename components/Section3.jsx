@@ -5,13 +5,14 @@ import useStore from "@/utils/store";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { fabrics } from "@/utils/consts";
+import Image from "next/image";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const colors = ["bg-[#702C28]", "bg-[#392E26]", "bg-[#788668]"];
+const colors = ["bg-[#702C28]", "bg-[#632f09]", "bg-[#788668]"];
 
 const HomeSection3 = () => {
   const [refresh, setRefresh] = useState(false);
@@ -54,13 +55,14 @@ const HomeSection3 = () => {
                     <RevealOnScroll
                       addedClasses={`flex flex-col h-[50vh] w-[50vh] animate-slideInLeft `}
                     >
-                      <div>
-                        <div className="relative h-full w-full transform rotate-[35deg]  overflow-hidden  rounded-[5vw] shadow-lg ">
-                          <img
-                            src={`${item.image1}`}
-                            className="h-full w-full object-cover"
-                          />
-                        </div>
+                      <div className="relative h-full w-full transform   ">
+                        <Image
+                          src={
+                            process.env.NEXT_PUBLIC_API_URL + `${item.image1}`
+                          }
+                          layout="fill"
+                          className="h-full w-full rotate-[30deg] object-cover rounded-[5vw] shadow-lg"
+                        />
                       </div>
                     </RevealOnScroll>
                   </div>
@@ -96,18 +98,23 @@ const HomeSection3 = () => {
                           </span>
                         ))}
                     </h2>
+
+                    <button className=" px-8 py-2 relative border-[0.5px] border-white rounded-full mt-[5vh] animate-slideUp">
+                      <p className=" text-white">DISCOVER COLLECTION</p>
+                    </button>
                   </div>
                   <div className=" flex flex-col items-center w-1/4">
                     <RevealOnScroll
-                      addedClasses={`flex flex-col h-[50vh] w-[50vh]  animate-slideInRight `}
+                      addedClasses={`flex flex-col h-[50vh] w-[50vh] animate-slideInRight `}
                     >
-                      <div>
-                        <div className="relative h-full w-full transform -rotate-[35deg]  overflow-hidden  rounded-[5vw] shadow-lg ">
-                          <img
-                            src={`${item.image2}`}
-                            className="h-full w-full object-cover"
-                          />
-                        </div>
+                      <div className="relative h-full w-full transform   ">
+                        <Image
+                          src={
+                            process.env.NEXT_PUBLIC_API_URL + `${item.image2}`
+                          }
+                          layout="fill"
+                          className="h-full w-full rotate-[-30deg] object-cover rounded-[5vw] shadow-lg"
+                        />
                       </div>
                     </RevealOnScroll>
                   </div>

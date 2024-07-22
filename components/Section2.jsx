@@ -44,7 +44,10 @@ const HomeSection2 = (ref) => {
                   >
                     <div className="relative h-[15vh] w-full rounded-lg overflow-hidden">
                       <Image
-                        src={`/fabric${cycle}.png`}
+                        src={
+                          process.env.NEXT_PUBLIC_API_URL +
+                          `/fabric${cycle}.png`
+                        }
                         layout="fill"
                         objectFit="cover"
                       />
@@ -107,7 +110,10 @@ const HomeSection2 = (ref) => {
                   >
                     <div className="relative h-[15vh] w-full rounded-lg overflow-hidden">
                       <Image
-                        src={`/fabric${cycle}.png`}
+                        src={
+                          process.env.NEXT_PUBLIC_API_URL +
+                          `/fabric${cycle}.png`
+                        }
                         layout="fill"
                         objectFit="cover"
                       />
