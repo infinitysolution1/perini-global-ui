@@ -15,7 +15,7 @@ module.exports = {
       animation: {
         "text-reveal":
           "text-reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1)  0.5s ",
-        slideUp: "slideUp 2s ease-in-out var(--slidein-delay, 0) forwards",
+        slideUp: "slideUp 2s ease-in-out forwards",
         bounce: "bounce 4s infinite",
         slideInLeft: "slideInLeft 2s  ease-in-out",
         slideInRight: "slideInRight 2s ease-in-out",
@@ -44,12 +44,18 @@ module.exports = {
           },
         },
         slideInLeft: {
-          "0%": { transform: "translateX(-30vw)", opacity: 0 },
-          "100%": { transform: "translateX(-10vw)", opacity: 1 },
+          "0%": { transform: "translateX(-20vw)", opacity: 0 },
+          "100%": {
+            transform: "translateX(0vw)",
+            opacity: 1,
+          },
         },
         slideInRight: {
-          "0%": { transform: "translateX(30vw)", opacity: 0 },
-          "100%": { transform: "translateX(10vw)", opacity: 1 },
+          "0%": { transform: "translateX(20vw) ", opacity: 0 },
+          "100%": {
+            transform: "translateX(0vw) ",
+            opacity: 1,
+          },
         },
         slideOutLeft: {
           "0%": { transform: "translateX(0)" },
